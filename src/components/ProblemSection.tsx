@@ -26,22 +26,22 @@ const problems = [
 
 const ProblemSection: React.FC = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-10 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-16">
+        <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-gray-200 mb-16">
           Problems We're Solving
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {problems.map((problem, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-stone dark:bg-gray-700 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                <problem.icon className="w-8 h-8 text-blue-600" />
+              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-6">
+                <problem.icon className="w-8 h-8 text-blue-600 dark:text-blue-400" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">{problem.title}</h3>
-              <p className="text-gray-600">{problem.description}</p>
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-4">{problem.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300">{problem.description}</p>
             </div>
           ))}
         </div>

@@ -49,19 +49,19 @@ const teamMembers = [
 
 const Team: React.FC = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-stone dark:bg-gray-900">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-4">
+        <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-gray-200 mb-4">
           Meet Our Team
         </h2>
-        <p className="text-center text-gray-600 mb-16">
+        <p className="text-center text-gray-600 dark:text-gray-300 mb-16">
           Supervised by Dr. Mohamed Aboul-Dahab
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+              className="bg-stone dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
             >
               <img
                 src={member.image}
@@ -69,16 +69,16 @@ const Team: React.FC = () => {
                 className="w-full h-64 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
                   {member.name}
                 </h3>
-                <p className="text-gray-600 mb-4">{member.role}</p>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">{member.role}</p>
                 <div className="flex space-x-4">
                   <a
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-700"
+                    className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
                   >
                     <Linkedin className="w-6 h-6" />
                   </a>
@@ -86,7 +86,7 @@ const Team: React.FC = () => {
                     href={member.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-gray-700"
+                    className="text-gray-600 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-400"
                   >
                     <Github className="w-6 h-6" />
                   </a>

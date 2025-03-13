@@ -35,13 +35,13 @@ const phases = [
 
 const Timeline: React.FC = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-16">
+        <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-gray-200 mb-16">
           Implementation Plan
         </h2>
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200 dark:bg-blue-800"></div>
           <div className="space-y-12">
             {phases.map((phase, index) => (
               <div
@@ -56,16 +56,16 @@ const Timeline: React.FC = () => {
                       index % 2 === 0 ? 'text-right' : 'text-left'
                     }`}
                   >
-                    <h3 className="text-xl font-bold text-blue-600 mb-2">
+                    <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-2">
                       {phase.phase}
                     </h3>
-                    <h4 className="text-lg font-semibold mb-2">{phase.title}</h4>
-                    <p className="text-gray-600">{phase.description}</p>
+                    <h4 className="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-100">{phase.title}</h4>
+                    <p className="text-gray-600 dark:text-gray-300">{phase.description}</p>
                   </div>
                 </div>
                 <div className="relative flex items-center justify-center w-8 h-8">
-                  <div className="absolute w-4 h-4 bg-blue-600 rounded-full"></div>
-                  <div className="w-8 h-8 bg-blue-100 rounded-full animate-pulse"></div>
+                  <div className="absolute w-4 h-4 bg-blue-600 dark:bg-blue-400 rounded-full"></div>
+                  <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-full animate-pulse"></div>
                 </div>
                 <div className="w-1/2 pl-8"></div>
               </div>
